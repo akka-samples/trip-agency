@@ -10,7 +10,6 @@ import akka.javasdk.annotations.http.HttpEndpoint;
 import akka.javasdk.annotations.http.Post;
 import akka.javasdk.client.ComponentClient;
 import akka.javasdk.http.HttpException;
-import com.tripagent.ai.models.TripAgentChatModel;
 import com.tripagent.application.AccommodationBookingEntity;
 import com.tripagent.application.FlightBookingEntity;
 import com.tripagent.application.TripAgentWorkflow;
@@ -27,7 +26,7 @@ public class TripEndpoint {
   private final ComponentClient componentClient;
   private static final Logger log = LoggerFactory.getLogger(TripEndpoint.class);
 
-  public TripEndpoint(ComponentClient componentClient, TripAgentChatModel tripAgentChatModel) {
+  public TripEndpoint(ComponentClient componentClient) {
     this.componentClient = componentClient;
   }
 
