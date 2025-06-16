@@ -1,4 +1,4 @@
-package com.tripagent.ai.tools;
+package com.tripagent.application.agents.tools;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,9 +14,9 @@ public record AccommodationAPIResponse(
     String id,
     String name,
     String neighborhood,
-    ZonedDateTime checkin,
-    ZonedDateTime checkout,
-    int pricepernight) {
+    ZonedDateTime availableFrom,
+    ZonedDateTime availableUntil,
+    int pricePerNight) {
 
   private static final Logger log = LoggerFactory.getLogger(AccommodationAPIResponse.class);
 
